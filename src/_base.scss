@@ -1,45 +1,4 @@
 // --------------------------
 // Base
 // --------------------------
-* {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-}
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-html,
-body {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-html {
-    box-sizing: border-box;
-    font-size: 12px; //根元素字体大小
-}
-
-body {
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    color: $text-color;
-    line-height: $line-height-base;
-}
-
-a,
-input,
-select,
-textarea {
-    outline: 0;
-}
-
-a {
-    text-decoration: none;
-    color: #007aff; //链接默认色
-}

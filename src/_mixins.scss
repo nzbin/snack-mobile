@@ -12,15 +12,3 @@
         clear: both;
     }
 }
-
-// text overflow
-@mixin text-overflow() {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-// justify-content
-@mixin justify-content(){
-    
-}
