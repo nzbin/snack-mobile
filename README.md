@@ -1,1 +1,1 @@
-# snack-mobile
+# snacki
