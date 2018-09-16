@@ -1,45 +1,49 @@
 {
-	"name": "snack-mobile",
-	"version": "0.1.0",
-	"description": "A CSS framework for mobile-first.",
-	"homepage": "https://snack-mobile.github.io",
-	"repository": "nzbin/snack-mobile",
-	"license": "MIT",
-	"author": "nzbin <nzb329@163.com>",
-	"main": "dist/snack-mobile.css",
-	"keywords": [
-		"css",
-		"css3",
-		"sass",
-		"front-end",
-		"framework",
-		"mobile-first"
-	],
-	"dependencies": {
-		"normalize.css": "~5.0.0"
-	},
-	"devDependencies": {
-		"autoprefixer": "^6.5.4",
-		"editorconfig-tools": "^0.1.1",
-		"eslint": "^3.14.0",
-		"eslint-config-styled": "^0.0.0",
-		"node-sass": "^3.13.1",
-		"npm-run-all": "^2.3.0",
-		"postcss-cli": "^2.6.0",
-		"rimraf": "^2.5.4",
-		"onchange": "^2.5.0",
-		"sass-lint": "^1.10.2"
-	},
-	"engines": {
-		"node": ">=4"
-	},
-	"scripts": {
-		"start": "run-p build watch",
-		"build": "run-s clean sass autoprefixer",
-		"clean": "rimraf dist",
-		"sass": "node-sass --output-style expanded src/snack-mobile.scss dist/snack-mobile.css && node-sass --output-style compressed src/snack-mobile.scss dist/snack-mobile.min.css",
-		"autoprefixer": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r dist/*.css",
-		"watch": "onchange src -- run-p build",
-		"lint": "sass-lint -c .sasslintrc src --verbose --no-exit && eslint test -c styled && editorconfig-tools check ."
-	}
+  "name": "snacki",
+  "version": "0.1.0",
+  "description": "A CSS framework for mobile.",
+  "homepage": "https://snacki.github.io",
+  "repository": "nzbin/snacki",
+  "license": "MIT",
+  "author": "nzbin <nzb329@163.com>",
+  "main": "dist/snacki.css",
+  "keywords": [
+    "css",
+    "css3",
+    "sass",
+    "front-end",
+    "framework",
+    "mobile"
+  ],
+  "dependencies": {
+    "normalize.css": "~5.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "editorconfig-tools": "^0.1.1",
+    "node-sass": "^4.9.3",
+    "npm-run-all": "^2.3.0",
+    "onchange": "^2.5.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-header": "^1.0.0",
+    "rimraf": "^2.5.4",
+    "stylelint": "^9.2.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "start": "run-p build watch",
+    "build": "run-s clean sass postcss",
+    "build:dev": "run-s clean sass",
+    "clean": "rimraf dist",
+    "sass": "node-sass --output-style expanded src/snacki.scss dist/snacki.css",
+    "sassmin": "node-sass --output-style compressed src/snacki.scss dist/snacki.min.css",
+    "postcss": "postcss -r dist/*.css --map",
+    "watch": "onchange src -- run-p build",
+    "lint": "stylelint --syntax scss \"src/**/*.scss\" --fix && editorconfig-tools check ."
+  }
 }

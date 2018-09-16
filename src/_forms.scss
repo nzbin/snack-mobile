@@ -1,0 +1,152 @@
+// --------------------------------------------------
+// Forms
+// --------------------------------------------------
+// select
+// textarea
+// input[type="text"]
+// input[type="password"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="time"]
+// input[type="week"]
+// input[type="number"]
+// input[type="email"]
+// input[type="url"]
+// input[type="search"]
+// input[type="tel"]
+// input[type="color"]
+input[type="file"] {
+  display: block;
+}
+
+textarea {
+  resize: vertical;
+}
+
+label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-field {
+  display: block;
+  width: 100%;
+  padding: 4px 8px;
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  background-color: $input-bg-color;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  color: $input-text-color;
+
+  &:focus {
+    border-color: $input-border-color-focus;
+    outline: 0;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+.form-label {
+  margin-bottom: 0;
+  padding-top: 3px;
+  text-align: right;
+}
+
+// label+input
+.form-item {
+  margin-bottom: 15px;
+}
+
+.form-inline {
+  input[type="file"],
+  .form-item {
+    display: inline-block;
+  }
+
+  .form-field {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+}
+
+// horizontal
+.form-horizontal {
+  .form-item {
+    margin-right: -15px;
+    margin-left: -15px;
+
+    @include clearfix;
+  }
+}
+
+// checkbox & radio
+.checkbox,
+.radio {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+
+  label {
+    position: relative;
+    display: inline-block;
+    min-height: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  &.disabled label {
+    cursor: not-allowed;
+  }
+
+  &.inline {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: 400;
+  }
+}
+
+.checkbox + .checkbox,
+.radio + .radio {
+  margin-top: -5px;
+}
+
+.checkbox.inline + .checkbox.inline,
+.radio.inline + .radio.inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.checkbox input[type="checkbox"],
+.radio input[type="radio"] {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: -20px;
+}
+
+// fieldset disabled
+fieldset[disabled] {
+  .form-control,
+  .checkbox label,
+  .radio label {
+    cursor: not-allowed;
+  }
+}
+
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
