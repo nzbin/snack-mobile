@@ -2,10 +2,14 @@
   "name": "snacki",
   "version": "0.1.0",
   "description": "A CSS framework for mobile.",
+  "files": [
+    "dist",
+    "src"
+  ],
   "homepage": "https://snacki.github.io",
   "repository": "nzbin/snacki",
   "license": "MIT",
-  "author": "nzbin <nzb329@163.com>",
+  "author": "nzbin",
   "main": "dist/snacki.css",
   "keywords": [
     "css",
@@ -15,9 +19,6 @@
     "framework",
     "mobile"
   ],
-  "dependencies": {
-    "normalize.css": "~5.0.0"
-  },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "editorconfig-tools": "^0.1.1",
